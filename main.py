@@ -3,7 +3,7 @@ import requests as req       # Importing requests module to make API calls to th
 
 def get_random_joke():
     '''fetch random joke from the API'''
-    try:   # Try to make a GET request to the API
+    try:   # Try block to handle the exceptions if any occurs during the execution of the code inside the block 
         response = req.get("https://official-joke-api.appspot.com/random_joke") # Making a GET request to the API just check on web browser
         if response.status_code == 200: # If the response is successful (status code 200) then store the joke data
             joke_data = response.json() # Storing the joke data in JSON format in joke_data variable
